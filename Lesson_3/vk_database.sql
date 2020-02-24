@@ -43,4 +43,11 @@ CREATE TABLE friendship (
 	PRIMARY KEY (user_id, friend_id)
 );
 
+CREATE TABLE friendship_statuses (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(150) NOT NULL UNIQUE,
+	created_at DATETIME DEFAULT NOW()
+);
+
+
 
