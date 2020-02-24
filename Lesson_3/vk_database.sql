@@ -34,4 +34,13 @@ CREATE TABLE messages (
 	created_at DATETIME DEFAULT NOW()
 );
 
+CREATE TABLE friendship (
+	user_id INT UNSIGNED NOT NULL,
+	friend_id INT UNSIGNED NOT NULL,
+	status_id INT UNSIGNED NOT NULL,
+	requested_at DATETIME DEFAULT NOW(),
+	confirmed_at DATETIME,
+	PRIMARY KEY (user_id, friend_id)
+);
+
 
