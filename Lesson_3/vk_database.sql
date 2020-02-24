@@ -24,4 +24,14 @@ CREATE TABLE profiles (
 	updated_at DATETIME DEFAULT NOW() ON UPDATE NOW()
 );
 
+CREATE TABLE messages (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	from_user_id INT UNSIGNED NOT NULL,
+	to_user_id INT UNSIGNED NOT NULL,
+	body TEXT NOT NULL,
+	is_important BOOLEAN,
+	is_delivered BOOLEAN,
+	created_at DATETIME DEFAULT NOW()
+);
+
 
