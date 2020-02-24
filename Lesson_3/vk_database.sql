@@ -56,5 +56,11 @@ CREATE TABLE communities (
 );
 
 
+CREATE TABLE communities_users (
+	community_id INT UNSIGNED NOT NULL,
+	user_id INT UNSIGNED NOT NULL,
+	PRIMARY KEY (community_id, user_id)
+);
+
 
 
