@@ -13,4 +13,15 @@ CREATE TABLE users (
 	updated_at DATETIME DEFAULT NOW() ON UPDATE NOW()
 );
 
+CREATE TABLE profiles (
+	user_id INT UNSIGNED NOT NULL,
+	gender CHAR(1) NOT NULL,
+	birthday DATE,
+	city VARCHAR(100),
+	country VARCHAR(100),
+	photo_id INT UNSIGNED NOT NULL,
+	created_at DATETIME DEFAULT NOW(),
+	updated_at DATETIME DEFAULT NOW() ON UPDATE NOW()
+);
+
 
