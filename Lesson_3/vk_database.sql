@@ -49,5 +49,12 @@ CREATE TABLE friendship_statuses (
 	created_at DATETIME DEFAULT NOW()
 );
 
+CREATE TABLE communities (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(150) NOT NULL UNIQUE,
+	created_at DATETIME DEFAULT NOW()
+);
+
+
 
 
